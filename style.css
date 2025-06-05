@@ -1,0 +1,44 @@
+/* Cores divertidas que as crianças adoram! */
+:root {
+    /* Cores base */
+    --cor-principal: #4b7bec;    /* Azul brilhante */
+    --cor-secundaria: #26de81;   /* Verde alegre */
+    --cor-destaque: #fd9644;     /* Laranja vibrante */
+    --cor-fundo: #f7f1e3;        /* Bege claro para não cansar os olhos */
+    --cor-texto: #2d3436;        /* Cinza escuro para leitura fácil */
+    --cor-titulo: #6c5ce7;       /* Roxo para títulos */
+    --cor-link: #e84393;         /* Rosa para links */
+    /* Cores para gradientes */
+    --green-yellow: #ADFF2F;     /* Uma cor verde-amarelada vibrante */
+    --moonstone: #3AA8C1;        /* Um azul esverdeado bonito */
+/* Gradientes padronizados - criamos variáveis para manter consistência visual no site */
+    /* Gradiente principal - vai do verde-amarelo para azul, em ângulo de 135 graus */
+    --gradient-primary: linear-gradient(135deg, var(--green-yellow), var(--moonstone));
+    /* Gradiente invertido - mesmas cores mas em ordem oposta */
+    --gradient-primary-reverse: linear-gradient(135deg, var(--moonstone), var(--green-yellow));
+    /* Gradiente para animação - tem 4 pontos de cor para transição
+suave na animação */
+--gradient-animated: linear-gradient(135deg,
+        var(--green-yellow),
+        var(--moonstone),
+        var(--green-yellow),
+        var(--moonstone));
+}
+
+body {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    background-image: url('images/fundo.avif');
+    animation: flutuando 60s infinite linear;
+}
+
+h1, h2, h3 {
+    color: var(--cor-titulo);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px dashed var(--cor-destaque);
+    padding-bottom: 10px;
+    font-family: 'Mochy Pop One', 'Comic Sans MS', cursive;
+}
