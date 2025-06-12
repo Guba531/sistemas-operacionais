@@ -101,3 +101,183 @@ nav h2:before {
 nav h2:after {
     right: 15px;
 }
+
+header {
+    background: var(--gradient-primary);
+    padding: 20px;
+    border-bottom: 10px solid var(--cor-secundaria);
+    border-radius: 0 0 30px 30px;
+    margin-bottom: 30px;
+}
+
+nav {
+    background: var(--gradient-primary-reverse);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 15px;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border-left: 6px solid var(--cor-destaque);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+ul li:hover {
+    transform: rotate(1deg) translateY(-5px);
+    background-color: #fff8e8;
+    border-left-color: var(--cor-principal) ;
+}
+
+a {
+    color: var(--cor-link);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    position: relative;
+}
+
+a:hover {
+    color: var(--cor-principal);
+    text-decoration: underline wavy var(--cor-destaque);
+}
+
+img.mini-logo {
+    vertical-align: middle;
+    margin-right: 12px;
+    border-radius: 50%; /* Faz ficar redondinho */
+    border: 3px solid var(--cor-destaque);
+    background: white;
+    padding: 3px;
+    transition: transform 0.3s;
+}
+
+img.mini-logo:hover {
+    transform: rotate(360deg);
+}
+
+img.ilustracao, img.grafico {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 15px;
+    border: 6px solid white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.5s;
+}
+
+img.ilustracao:hover, img.grafico:hover {
+    transform: scale(1.03);
+}
+
+figcaption {
+    background: var(--gradient-primary-reverse);
+    color: white;
+    text-align: center;
+    padding: 8px;
+    border-radius: 0 0 15px 15px;
+    font-style: italic;
+    margin-top: -5px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.15);
+
+}
+
+section {   
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid var(--cor-secundaria);
+}
+
+/* Article é uma história completa, representa conteúdo relacionado,
+ mas secundário ao conteúdo principal da página
+*/
+article {
+    padding: 15px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+aside {
+    background-color: #ffe8d6;
+    padding: 15px;
+    border-radius: 15px;
+    border: 3px dashed var(--cor-destaque);
+    margin: 20px 0;
+    box-shadow: 5px 5px 0px var(--cor-principal);
+    transform: rotate(1deg);
+}
+
+aside h3 {
+    color: var(--cor-destaque);
+    text-align: center;
+    margin-top: 0;
+}
+
+iframe {
+    background: linear-gradient(135deg, var(--green-yellow) 0%, var(--moonstone) 100%);
+    padding: 30px;
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+    border-radius: 30px 30px 0 0;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
+}
+
+footer p {
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+/*display: flex:
+*   **O que faz:** Transforma um elemento contêiner em um **contêiner flexbox**.
+*   **Resultado:** Os filhos diretos desse contêiner se tornam **itens flex** e podem ser organizados em uma linha ou coluna.
+*   **Uso:** É a base para usar o layout flexbox, permitindo controlar o alinhamento,
+* a direção e a distribuição do espaço entre os itens de forma eficiente, especialmente para layouts unidimensionais (linha ou coluna).
+
+gap:
+*   **O que faz:** Define o tamanho do espaço ("gap") entre as linhas e colunas em layouts flexbox ou grid.
+*   **Sintaxe:** Pode ser usado como atalho para `row-gap` (espaço entre linhas) e `column-gap` (espaço entre colunas). Ex: `gap: 10px;` (10px entre linhas e colunas) ou `gap: 10px 20px;` (10px entre linhas, 20px entre colunas).
+*   **Uso:** Simplifica a adição de espaço entre itens sem precisar usar margens nos próprios itens (o que pode causar problemas nas bordas).
+
+flex-wrap
+O que faz: Controla se os itens flex (os filhos diretos de um contêiner flex) devem quebrar para uma nova linha (ou coluna, dependendo da direção principal) quando não há espaço suficiente no contêiner flex.
+Propósito: É fundamental para criar layouts responsivos que se adaptam a diferentes tamanhos de tela, evitando que os itens transbordem do contêiner.
+
+nowrap (Valor padrão):
+*   Os itens flex **não quebram**. Eles tentarão permanecer em uma única linha (ou coluna).
+*   Se o espaço for insuficiente, os itens podem encolher (dependendo de outras propriedades como `flex-shrink`) ou transbordar (overflow) do contêiner.
+wrap:
+*   Os itens flex **quebram** para uma nova linha (ou coluna) se não houver espaço suficiente no contêiner.
+*   As novas linhas (ou colunas) são adicionadas na direção da linha principal. principal for horizontal (linha), as novas linhas aparecerão acima da primeira. É menos comum que o `wrap`.
+*/
