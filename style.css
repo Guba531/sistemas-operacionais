@@ -338,6 +338,13 @@ wrap:
     border: 2px solid transparent;
 }
 
+/* Imagens dentro dos ícones sociais */
+.social-icon img {
+    vertical-align: middle;
+    margin-right: 8px;
+    transition: transform 0.3s;
+}
+
 /* Efeitos diferentes para cada mídia social */
 .facebook:hover {
     background: linear-gradient(135deg, #4267B2 0%, #3b5998 100%);
