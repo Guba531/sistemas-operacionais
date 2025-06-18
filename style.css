@@ -314,6 +314,10 @@ wrap:
     background: linear-gradient(135deg, #ff6b35 0%, var(--cor-destaque) 100%);
 }
 
+.footer-nav ul li:first-child a {
+    animation: pulseButton 2s infinite;
+}
+
 /* Os ícones de mídias sociais também com efeitos divertidos */
 .social-media {
     margin-top: 25px;
@@ -367,3 +371,67 @@ wrap:
 .social-icon:hover img {
     transform: rotate(360deg) scale(1.2);
 }
+
+#topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--gradient-primary);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+#topo:hover {
+    background: var(--gradient-primary-reverse);
+    transform: scale(1.1) translateY(-5px);
+}
+
+/*Em CSS, @keyframes é uma regra que define as etapas de uma animação,
+ indicando como um elemento se comporta em diferentes estágios da animação.*/
+
+ @keyframes flutuando {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+ }
+
+ @keyframes gradientAnimation {
+    from {
+        background-position: 0% 50%;
+    }
+    to {
+        background-position: 100 50;
+    }
+ }
+
+ @keyframes shineEffect {
+    0% {
+        transform: translateX(-100%) rotate(30deg);
+    }
+    100% {
+        transform: translateX(100%) rotate(30deg);
+    }
+ }
+
+ @keyframes pulseButton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+ }
